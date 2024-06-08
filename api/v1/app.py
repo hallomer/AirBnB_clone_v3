@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""Initializes a Flask web application."""
 from flask import Flask
 from models import storage
 from api.v1.views import app_views
 import os
-"""Initializes a Flask web application."""
+
 app = Flask(__name__)
 app.register_blueprint(app_views)
 

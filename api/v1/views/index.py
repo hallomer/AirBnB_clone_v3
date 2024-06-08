@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""Defines the index view."""
 from flask import json, Response
 from api.v1.views import app_views
-"""Defines the index view."""
 
 
 @app_views.route('/status', strict_slashes=False)
