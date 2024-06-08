@@ -3,6 +3,7 @@ from flask import json, Response
 from api.v1.views import app_views
 """Defines the index view."""
 
+
 @app_views.route('/status', strict_slashes=False)
 def status():
     """Returns the status of the API"""
