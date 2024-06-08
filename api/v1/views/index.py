@@ -6,6 +6,6 @@ from api.v1.views import app_views
 def status():
     """Returns the status of the API"""
     status = {
-	"status": "OK"
+	    "status": "OK"
     }    
     return jsonify(status)
