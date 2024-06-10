@@ -8,6 +8,7 @@ from models.place import Place
 from models.amenity import Amenity
 from os import getenv
 
+
 @app_views.route('/places/<place_id>/amenities', methods=['GET'],
                  strict_slashes=False)
 def get_place_amenities(place_id):
