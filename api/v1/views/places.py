@@ -78,15 +78,14 @@ def update_place(place_id):
     place.save()
     return jsonify(place.to_dict()), 200
 
-
 @app_views.route('/places_search', methods=['POST'], strict_slashes=False)
 def search_places():
     """Retrieves all Place objects based on search criteria."""
     if not request.is_json:
-        abort(400, description='Not a JSON')
+        abort(400, description="Not a JSON")
     data = request.get_json()
 
-    if not data or ('states' not in data and 'cities' not in data and 'amenities' not in data):
+    if not data or not len(data) or ('states' not in data and 'cities' not in data and 'amenities' not in data):
         places = list(storage.all(Place).values())
     else:
         places = set()
